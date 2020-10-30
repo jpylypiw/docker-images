@@ -16,4 +16,4 @@ jobs:
       
     - name: Build the Docker image
       run: |
-        docker build ansible --file Dockerfile --tag ansible:$(date +%s)
+        docker build ansible --file ansible/Dockerfile --tag ansible:$(date +%s)
