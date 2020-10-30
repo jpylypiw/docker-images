@@ -12,7 +12,7 @@ ENV DEBIAN_FRONTEND=noninteractive
 # update apt and install some packages
 RUN apt-get update \
     && apt-get -y upgrade \
-    && apt-get install -y python3-pip python3-dev sudo expect
+    && apt-get install -y python3-pip python3-dev sudo expect git
 
 # set alias python3 which is basically python
 RUN ln -s /usr/bin/python3 /usr/local/bin/python
