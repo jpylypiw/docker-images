@@ -7,10 +7,7 @@ LABEL maintainer="12394156+jpylypiw@users.noreply.github.com"
 ENV DEBIAN_FRONTEND=noninteractive
 
 RUN apt-get update \
-    && apt-get install -y python3-pip python3-dev \
-    && cd /usr/local/bin \
-    && ln -s /usr/bin/python3 python \
-    && pip3 install --upgrade pip \
-    && pip3 install --upgrade ansible \
-    && pip3 install --upgrade ansible-lint \
-    && pip3 install --upgrade yamllint
+    && apt-get -y upgrade \
+    && apt-get install -y python3-pip python3-dev sudo \
+    && ln -s /usr/bin/python3 /usr/local/bin/python \
+    && pip3 install --upgrade pip ansible ansible-lint yamllint
